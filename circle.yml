@@ -10,6 +10,8 @@ dependencies:
     - sudo apt-get update
     - wget 'https://github.com/maidsafe/safe_launcher/releases/download/0.8.0/safe_launcher-v0.8.0-linux-x64.tar.gz' -O aa.tar.gz
     - tar -xzvf aa.tar.gz
+    - cd safe_launcher-v0.8.0-linux-x64 ; ls -al
+    - sudo bash -c 'id -a;cd /home/ubuntu/mmssss/safe_launcher-v0.8.0-linux-x64/ ; ./safe_launcher'
 test:
   override:
     - echo dummy
