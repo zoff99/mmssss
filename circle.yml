@@ -8,6 +8,7 @@ dependencies:
     - sudo /etc/init.d/postgresql stop ; exit 0
     # -----------------------------------
     - sudo apt-get update
+    - sudo apt-get install libnotify-bin libnotify4
     - wget 'https://github.com/maidsafe/safe_launcher/releases/download/0.8.0/safe_launcher-v0.8.0-linux-x64.tar.gz' -O aa.tar.gz
     - tar -xzvf aa.tar.gz
     - cd safe_launcher-v0.8.0-linux-x64 ; ls -al
