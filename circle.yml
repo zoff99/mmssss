@@ -12,7 +12,17 @@ dependencies:
     - wget 'https://github.com/maidsafe/safe_launcher/releases/download/0.8.0/safe_launcher-v0.8.0-linux-x64.tar.gz' -O aa.tar.gz
     - tar -xzvf aa.tar.gz
     - cd safe_launcher-v0.8.0-linux-x64 ; ls -al
-    - sudo bash -c 'id -a;cd /home/ubuntu/mmssss/safe_launcher-v0.8.0-linux-x64/ ; ./safe_launcher'
+    - import -window root $CIRCLE_ARTIFACTS/capture_001.png
+    - sudo bash -c 'id -a;cd /home/ubuntu/mmssss/safe_launcher-v0.8.0-linux-x64/ ; ./safe_launcher' :
+        background: true
+    - sleep 30
+    - import -window root $CIRCLE_ARTIFACTS/capture_002.png
+    - sleep 60
+    - import -window root $CIRCLE_ARTIFACTS/capture_003.png
+    - sleep 60
+    - import -window root $CIRCLE_ARTIFACTS/capture_004.png
+    - sleep 60
+    - import -window root $CIRCLE_ARTIFACTS/capture_005.png
 test:
   override:
     - echo dummy
