@@ -1,0 +1,17 @@
+machine:
+  timezone:
+    Europe/Berlin
+dependencies:
+  pre:
+    # -----------------------------------
+    - sudo /etc/init.d/mysql stop ; exit 0
+    - sudo /etc/init.d/postgresql stop ; exit 0
+    # -----------------------------------
+    - sudo apt-get update
+    - wget 'https://github.com/maidsafe/safe_launcher/releases/download/0.8.0/safe_launcher-v0.8.0-linux-x64.tar.gz' -O aa.tar.gz
+    - tar -xzvf aa.tar.gz
+test:
+  override:
+    - echo dummy
+
+
